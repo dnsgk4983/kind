@@ -1,0 +1,1688 @@
+@font-face{
+    font-family:'SCDream4';
+    font-weight: 400;
+    src:url('../css/fonts/AnyConv.com__SCDream4.eot');
+    src:url('../css/fonts/AnyConv.com__SCDream4.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/SCDream4_1.woff') format('woff'),
+        url('../css/fonts/SCDream4_1.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'SCDrem7';
+    font-weight: 700;
+    src:url('../css/fonts/AnyConv.com__SCDream7.eot');
+    src:url('../css/fonts/AnyConv.com__SCDream7.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/SCDream7_1.woff') format('woff'),
+        url('../css/fonts/SCDream7_1.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    outline: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'SCDream4';
+    font-size: 16px;
+}
+
+section{
+    position: relative;
+}
+input[type=text]{
+    outline: none;
+}
+textarea{
+    outline: none;
+}
+/* 헤더 css */
+
+/* nav */
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 92px;
+    background: rgba(255,255,255, .8);
+    z-index: 99;
+}
+header.active{
+    background: #fff;
+}
+.nav{
+    width: 1240px;
+    height: 92px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-nav{
+    width: 937px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-nav > li{
+    display: block;
+    width: 178px;
+    text-align: center;
+}
+.main-nav > li.active{
+    font-family: 'SCDrem7';
+}
+.main-nav > li:nth-child(3){
+    position: relative;
+    z-index: 999;
+    width: 348px;
+}
+.main-nav > li ul{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    padding: 1em 0;
+    top: 92px;
+}
+
+.main-nav > li ul > li{
+    text-align: center;
+}
+
+
+.main-nav > li ul li a{
+    font-family: 'SCDream4';
+    display: block;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+/* 서브 뒤에 깔리는 배경 */
+.sub-back{
+    width: 100%;
+    height: 210px;
+    background: rgba(255, 254, 249, .9);
+    z-index: 9;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    display: none;
+    border-top: 2px solid #FEF7C3;
+}
+.sub-back.active{
+    display: block;
+}
+
+.nav a{
+    color: #5299ED;
+    font-size: 1.25em;
+}
+
+
+.main-nav a img{
+    width: 100%;
+    padding-top: 1.5em;
+}
+
+/* 메뉴 호버 효과 */
+.main-nav > li a:hover{
+    font-family: 'SCDrem7';
+}
+.main-nav > li > ul > li > .active{
+    border-radius: 2em;
+    background: #DBDBDB;
+    color: #262626;
+    font-family: 'SCDream4';
+}
+
+
+/* 상단 유저 아이콘 */
+.user-area{
+    position: absolute;
+    right: 3em;
+    top: 2.4em;
+}
+.user-area > a{
+    display: flex;
+    align-items: center; 
+    font-size: 1em;
+}
+.user-area img{
+    margin-right: 5px;
+}
+
+/* 메인 섹션 시작 */
+.main-wrap{
+    width: 100%;
+    height: 100%;
+    background: #FEF7C3;
+    padding: 3.75em 0;
+}
+.main--content{
+    width: 1360px;
+    display: flex;
+    margin: 0 auto;
+    color: #1D4793;
+}
+
+/* 메인타이틀 */
+.main--title{
+    width: 680px;
+    padding-top: 4.5625em;
+}
+.main-title{
+    font-size: 3.125em;
+    margin-bottom: .25em;
+}
+.main-title b{
+    font-family: 'SCDrem7';
+}
+
+.main-title-sub{
+    font-size: 2em;
+    line-height: 1.25em;
+    margin-bottom: 1.8125em;
+}
+/* 메인타이틀 버튼 */
+.main--title a{
+    color: #fff;
+    background: #FF6C80;
+    padding: 1em 2em;
+    border-radius: 2em;
+    font-size: 1.5em;
+}
+/* 메인 하단 카드영역 */
+.main--cards{
+    width: 1240px;
+    height: 400px;
+    background: #fffde6;
+    margin: 1.5em auto 0;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.card{
+    width: 290px;
+    height: 360px;
+    border-radius: 1em;
+}
+/* card-1 */
+.card-1{
+    background: linear-gradient( to bottom, #5299ED, #FF95A4 );
+    text-align: center;
+    padding: 1em 0;
+    height: 328px;
+}
+.card-1 h2{
+    margin-top: .5em;
+    color: #FFFAA2;
+    font-size: 1.75em;
+    line-height: 1.25em;
+}
+.card-1 p{
+    color: #fff;
+    margin-top: 1em;
+}
+
+/* card-2 */
+
+/* card-3 */
+.card-title{
+    height: 56px;
+    line-height: 56px;
+    background: #5299ED;
+    border-radius: 1em 1em 0 0;
+    font-size: 1.75em;
+    color: #fff;
+    font-family: "SCDrem7";
+    padding-left: 1em;
+}
+.card-3 ul{
+    margin-top: 1.75em;
+    padding: 0 1em;
+}
+.card-3 ul > li {
+    height: 3em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.card-3 ul > li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+}
+.card-3 ul > li > a{
+    display: block;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #262626;
+    font-size: 1.25em;
+}
+.card-3 ul span{
+    display: block;
+    text-align: right;
+    color: #7C7C7C;
+}
+
+/* card4 */
+.card-4 .card-title{
+    background: #FF6C80;
+}
+.card-4 img{
+    width: 290px;
+    margin-top: 1em;
+}
+
+/* 팝업 창 */
+.main-popup{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.pop-contents{
+    width: 640px;
+    height: 800px;
+    background: #FFFFFF;
+    border: 1px solid #707070;
+    margin: 0 auto;
+    margin-top: 5.5em;
+    position: relative;
+    text-align: center;
+}
+.pop-close{
+    position: absolute;
+    top: -4em;
+    right: 1em;
+}
+
+.pop-left-arrow{
+    position: absolute;
+    left: -8em;
+}
+.pop-right-arrow{
+    position: absolute;
+    right: -8em;
+}
+
+.pop-main{
+    margin-top: 23em;
+}
+.pop-main p{
+    font-size: 2em;
+    color: #262626;
+}
+
+.pop-btn{
+    position: absolute;
+    bottom: -6em;
+    left: 0;
+    right: 0;
+}
+.pop-btn a{
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    padding: .83333em 0;
+    background: #FF6C80;
+    border-radius: 2em;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.pop-wrap{
+    width: 640px;
+    height: 100%;
+    margin: 0 auto;
+}
+.popup-slick{
+    height: 100%;
+}
+
+.popup-slick .slick-track{
+    min-width: 640px !important;
+}
+.popup-slick .pop-conts.slick-slide.slick-cloned{
+    width: 640px !important;
+}
+
+/* ========================================================== */
+
+/* 추가영역 */
+.board-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #DBDBDB;
+    padding-bottom: 10em;
+}
+.board-title{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.board-title-left{
+    display: flex;
+    padding-top: 8em;
+}
+.board-title-1{
+    font-size: 40px;
+    font-family:'SCDrem7';
+    color: #1D4793;
+}
+.board-title-2{
+    font-size: 20px;
+    font-family:'SCDream4';
+    color: #1D4793;
+    padding-top: 20px;
+    padding-left: 2px;
+}
+.board-title-right{
+    width: 410px;
+    height: 203px;
+    overflow: hidden;
+}
+.board-title-right img{
+    width: 100%;
+}
+/* 게시판 컨텐츠 영역 */
+.board-content{
+    width: 1280px;
+    background: #fff;
+    margin: 0 auto;
+    padding-bottom: 75px;
+}
+/* 게시판 검색 영역 */
+.board-input{
+    width: 1200px;
+    height: 62px;
+    padding-top: 66px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.board-input-left{
+    display: flex;
+}
+.board-input-left-1{
+    font-size: 24px;
+    font-family:'SCDream4';
+    color: #898989;
+}
+.board-input-left-1 > .count{
+    font-size: 24px;
+    font-family:'SCDrem7';
+    color: #000;
+    padding-left: 2px;
+}
+.board-input-right{
+    display:flex;
+}
+.search{
+    height: 62px;
+    border: 3px solid #000;
+    box-sizing: border-box;
+    border-radius: 2em;
+    padding: 15px 30px;
+}
+.search-option{
+    width: 277px;
+    padding: 12px 30px;
+    outline: none;
+    color: #898989;
+    font-size: 24px;
+    font-family:'SCDrem7';
+
+    background: url(../images/check.png);
+    background-position: 220px center;
+    background-repeat: no-repeat;
+    appearance: none;
+}
+.search-input{
+    width: 482px;
+    margin-left: 11px;
+    outline: none;
+}
+.search-btn-wrap{
+    width: 175px;
+    height: 62px;
+    border-radius: 2em;
+    margin-left: 10px;
+    background: #7C7C7C;
+    cursor: pointer;
+}
+.search-btn{
+    padding: 18px 45px;
+    display: flex;
+}
+.search-btn>img{
+    width: 21px;
+    height: 22px;
+}
+.search-btn>a{
+    font-size: 24px;
+    color: #fff;
+    font-family:'SCDrem7';
+    padding-left: 10px;
+}
+
+.table-wrap .board-title{
+    padding-top: 1em;
+}
+.table-wrap .board-title-left{
+    padding-top: 6em;
+}
+.table-wrap .board-title-right{
+    height: 160px;
+}
+
+
+/* 테이블 */
+.board-table{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.board-table .table-top{
+    width: 100%;
+    display: flex;
+    border-top:  6px solid #000000;
+
+    border-bottom: 4px solid #000000;
+    padding: 19px 0;
+    font-size: 24px;
+    color: #000000;
+    font-family:'SCDrem7';
+}
+.board-table .table-number{
+    width: 8%;
+    text-align: center;
+}
+.board-table .table-condition{
+    width: 8%;
+    text-align: center;
+}
+.board-table .table-title{
+    width: 60%;
+    text-align: center;
+}
+.board-table .table-title-txt{
+    width: 57.8%;
+    text-align: left;
+}
+.board-table .table-who{
+    width: 12%;
+    text-align: center;
+}
+.board-table .table-date{
+    width: 12%;
+    text-align: center;
+}
+
+.board-table .table-number-content{
+    font-size: 18px;
+    color: #2C2C2C;
+    text-align: center;
+    font-family:'SCDream4';
+    padding: 20px 0;
+}
+
+.board-table .table-condition-content{
+    /* width: 80px; */
+    height: 36px;
+    border-radius: 2em;
+    text-align: center;
+    align-items: center;
+    line-height: 36px;
+
+    font-size: 16px;
+    color: #fff;
+    font-family:'SCDrem7';
+    margin: 12px 0;
+    line-height: 36px;
+
+}
+.board-table .condition-grey{
+    background:#7C7C7C;
+}
+.board-table .condition-pink{
+    background:#FB4F67;
+}
+.board-table .condition-blue{
+    background:#3A61DF;
+}
+.board-table .table-title-content{
+    font-size: 22px;
+    color: #2C2C2C;
+    font-family:'SCDrem7';
+    padding: 18px 0;
+    margin-left: 26px;
+}
+.board-table .table-who-content{
+    font-size: 20px;
+    color: #2C2C2C;
+    font-family:'SCDrem7';
+    text-align: center;
+    padding: 18px 0;
+}
+.board-table .table-date-content{
+    font-size: 18px;
+    color: #000000;
+    font-family:'SCDream4';
+    text-align: center;
+    padding: 20px 0;
+}
+.board-table .list-bg{
+    background: #EFEFEF;
+}
+.board-table .table-end{
+    border-bottom: 2px solid #2C2C2C;
+}
+
+.accordion  > li >.toggle{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #B4B4B4;
+    cursor: pointer;
+}
+
+.accordion > li:last-child >.toggle{
+    border-bottom: none;
+}
+.accordion > li:last-child > .toggle.active{
+    border-bottom: 1px solid #B4B4B4;
+}
+
+/* 게시판 아코디언 내부 */
+.accordion .inner{
+    overflow: hidden;
+    display: none;
+    background: #EFEFEF;
+}
+.accordion li{
+   width: 100%;
+}
+.accordion .inner-top{
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #DBDBDB;
+}
+.accordion .inner-left{
+    width: 15%;
+    font-size: 20px;
+    font-family:'SCDrem7';
+    text-align: center;
+    line-height: 34px;
+}
+.accordion .inner-txt-blue{
+    color: #3277C9;
+}
+.accordion .inner-txt-pink{
+    color: #FB4F67;
+}
+.accordion .inner-right{
+    width:85%;
+}
+.accordion .inner-right-txt{
+    color: #2C2C2C;
+    font-size: 18px;
+    font-family:'SCDream4';
+    line-height: 34px;
+    padding-bottom: 27px;
+}
+.accordion .inner-dash-color{
+    color: #B2B2B2;
+    padding: 0 28px;
+}
+.accordion .inner-click-txt{
+    color: #2C2C2C;
+    font-size: 14px;
+    font-family:'SCDrem7';
+    line-height: 28px;
+    cursor: pointer;
+}
+.accordion .inner-bottom{
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #B4B4B4;
+}
+
+/* 게시판 페이지 넘버 */
+.board-number a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #262626;
+    font-family:'SCDream4';
+}
+.board-number{
+    padding:30px 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.board-number .page-number{
+    width: 580px;
+}
+.board-number .page-number>ul{
+    display: flex;
+    align-items: center;
+}
+.board-number .page-number>ul>li{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #B2B2B2;
+    box-sizing: border-box;
+    list-style: none;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 0 3px;
+}
+.board-number .page-number>ul>li.active{
+    background: #000;
+}
+.board-number .page-number>ul>li.active>a{
+    color: #fff;
+}
+.board-number .page-number>ul>li:first-child{
+    margin-right: 20px;
+}
+.board-number .page-number>ul>li:last-child{
+    margin-left: 20px;
+}
+.board-number .write-btn{
+    width: 200px;
+    height: 62px;
+    background: #3277C9;
+    border-radius: 2em;
+    text-align: center;
+    line-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board-number .write-btn{
+    font-size: 24px;
+    font-family:'SCDrem7';
+    color: #fff;
+}
+.write-btn-wrap{
+    width: 200px;
+    height: 62px;
+    border-radius: 2em;
+    background: #7C7C7C;
+    cursor: pointer;
+}
+.write-btn{
+    display: flex;
+    font-family: 'SCDrem7';
+    color: #fff;
+}
+.write-btn > img{
+    width: 21px;
+    height: 21px;
+    margin-right: 10px;
+}
+
+.null{
+    width: 150px;
+    height: 10px;
+}
+/* 테이블 */
+.board-table{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.board-table .table-top{
+    width: 100%;
+    display: flex;
+    border-top:  6px solid #000000;
+
+    border-bottom: 4px solid #000000;
+    padding: 19px 0;
+    font-size: 24px;
+    color: #000000;
+    font-family:'SCDrem7';
+}
+.board-table .table-number{
+    width: 8%;
+    text-align: center;
+}
+.board-table .table-condition{
+    width: 8%;
+    text-align: center;
+}
+.board-table .table-title{
+    width: 60%;
+    text-align: center;
+}
+.board-table .table-title-txt{
+    width: 57.8%;
+    text-align: left;
+}
+.board-table .table-who{
+    width: 12%;
+    text-align: center;
+}
+.board-table .table-date{
+    width: 12%;
+    text-align: center;
+}
+
+
+
+.board-table .table-number-content{
+    font-size: 18px;
+    color: #2C2C2C;
+    text-align: center;
+    font-family:'SCDream4';
+    padding: 20px 0;
+}
+
+.board-table .condition-grey{
+    background:#7C7C7C;
+}
+.board-table .condition-pink{
+    background:#FB4F67;
+}
+.board-table .condition-blue{
+    background:#3A61DF;
+}
+.board-table .table-title-content{
+    font-size: 22px;
+    color: #2C2C2C;
+    font-family:'SCDrem7';
+    padding: 18px 0;
+    margin-left: 26px;
+}
+.board-table .table-who-content{
+    font-size: 20px;
+    color: #2C2C2C;
+    font-family:'SCDrem7';
+    text-align: center;
+    padding: 18px 0;
+}
+.board-table .table-date-content{
+    font-size: 18px;
+    color: #000000;
+    font-family:'SCDream4';
+    text-align: center;
+    padding: 20px 0;
+}
+.accordion  > li >.toggle{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #B4B4B4;
+}
+
+/* 사회적 경제 페이지 */
+.social-content-wrap{
+    width: 1280px;
+    background: #fff;
+    margin: 0 auto;
+}
+.social-content{
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+}
+.social-content .social-img{
+    width: 687px;
+}
+.social-content .social-img>img{
+    width: 551px;
+    height: 553px;
+    margin: 65px 65px;
+}
+.social-content .social-txt{
+    width: 480px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 33px;
+}
+.social-content .social-txt-title{
+    font-size: 48px;
+    font-family:'SCDrem7';
+    color: #FB4F67;
+    line-height: 64px;
+    padding-bottom: 25px;
+}
+.social-content .social-txt-detail{
+    font-size: 1.5em;
+    font-family:'SCDream4';
+    color: #000000;
+    line-height: 38px;
+}
+/* ========================================================== */
+.buy-receive{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    width: 620px;
+    height: 760px;
+    margin: 0 auto;
+    background: #Fff;
+}
+
+.buy-title{
+    width: 100%;
+    height: 60px;
+    background: #3277C9;
+    line-height: 60px;
+    position: relative;
+}
+.buy-title h3{
+    font-size: 1.5em;
+    color: #fff;
+    font-family: 'SCDrem7';
+    margin-left: 1.25em;
+}
+
+.buy-body{
+    border: 1px solid #000;
+    border-top: none;
+    padding: 2.5em 0;
+}
+
+.form-field{
+    width: 578px;
+    height: 499px;
+    border-top: 2px solid #B2B2B2;
+    border-bottom: 2px solid #B2B2B2;
+    margin: 0 auto;
+}
+
+.form-field > div{
+    display: flex;
+    align-items: center;
+}
+
+.form-field > div > div{
+    padding:0 13px;
+    width: 100%;
+}
+
+.form-field > div > p{
+    width: 112px;
+    font-size: 18px;
+    padding-left: 21px;
+    background: #EFEFEF;
+}
+
+.form-field input[type=text]{
+    width: 100%;
+    height: 52px;
+    border: 1px solid #969696;
+    outline: none;
+}
+
+/* 폼필드 - 구분 */
+.buy-sortation{
+    height: 80px;
+    border-bottom: 2px solid #B2B2B2;
+}
+.buy-sortation p{
+    height: 82px;
+    line-height: 82px;
+}
+.buy-sortation .check-wrap{
+    padding-left: 1.1725em;
+}
+.buy-sortation form{
+    width: 340px;
+    display: flex;
+    align-items: center;
+}
+.buy-sortation .check-item{
+    width: 50%;
+}
+
+
+
+.buy-sortation .check-wrap span{
+    font-size: 1.75em;
+    color: #262626;
+}
+
+input[type='radio'],
+input[type='radio']:checked {
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  margin-right: 0.1rem;
+  outline: none;
+  vertical-align: -7px;
+  cursor: pointer;
+}
+input[type='radio'] {
+  background : url(../images/ico_radio.png);
+  background-size: cover;
+}
+input[type='radio']:checked {
+  background: url(../images/ico_radio_checked.png);
+  background-size: cover;
+}
+
+/* 폼필드 - 제목 */
+.form-field .buy-title-wrap{
+    height: 67px;
+    border-bottom: 1px solid #B2B2B2;
+}
+
+.form-field .buy-title-wrap p{
+    height: 68px;
+    line-height: 68px;
+}
+
+.form-field .buy-title-wrap input{
+    border: 1px solid #969696;
+    width: 98%;
+    padding-left: 20px;
+}
+
+/* 폼필드 - 내용 */
+.form-field .buy-text{
+    height: 255px;
+    border-bottom: 1px solid #B2B2B2;
+}
+.form-field .buy-text p{
+    height: 254px;
+    line-height: 254px;
+}
+
+.form-field textarea{
+    width: 98%;
+    height: 218px;
+    border: 1px solid #969696;
+    resize: none;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 22px;
+}
+
+/* 폼필드 파일첨부 */
+.buy-attach{
+    height: 99px;
+    align-items: baseline !important;
+}
+.buy-attach p{
+    height: 93px;
+    line-height: 93px;
+}
+.attach-items{
+    height: 80px;
+    padding: 0 !important;
+    position: relative;
+    top: -11px;
+}
+.buy-attach-wrap{
+    display: flex;
+    padding: 0 !important;
+    padding-left: 13px !important;
+}
+.buy-attach-wrap input[type=file]{
+    position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip:rect(0,0,0,0);
+	border: 0;
+}
+.buy-attach-wrap label{
+    display: inline-block;
+    width: 100px;
+    height: 52px;
+    color: #fff;
+	font-size: 1em;
+    line-height: 52px;
+    font-family: 'SCDrem7';
+    text-align: center;
+    border: 1px solid #2C2C2C;
+	background-color: #2C2C2C;
+	cursor: pointer;
+}
+.buy-attach-wrap .upload-name{
+    width: 355px;
+    height: 52px;
+    display: inline-block;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #fff;
+    border: 1px solid #969696;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.attach-addarea{
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding-left: 13px;
+}
+.attach {
+    margin-right: 1.25em;
+}
+.attach a{
+    color: #262626;
+    font-family: 'SCDrem7';
+    display: flex;
+    align-items:center;
+}
+.attach img{
+    width: 20px;
+    margin-left: 5px;
+}
+
+/* 폼필드 - 하단 버튼영역 */
+.buy-bottom{
+    width: 580px;
+    margin: 0 auto;
+    background: #fff;
+}
+.buy-bottom p{
+    margin-top: 10px;
+    font-size: .875em;
+    color: #7C7C7C;
+}
+.buy-btn-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.75em;
+}
+.buy-bottom .buy-btn{
+    display: block;
+    width: 200px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    border-radius: 2em;
+    background: #7C7C7C;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'SCDrem7';
+    margin: 0 5px;
+}
+.buy-bottom .buy-btn.check{
+    background: #3277C9;
+}
+
+/* 상태관리 팝업관련 css */
+.stat-pop{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 620px;
+    height: 400px;
+    margin: 0 auto;
+    top: 17em;
+    display: none;
+}
+.stat-title{
+    width: 602px;
+    background: #3277C9;
+    padding-left: 1.25em;
+    height: 60px;
+    line-height: 60px;
+}
+.stat-title h3{
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'SCDrem7';
+}
+
+.stat-body{
+    width: 620px;
+    height: 340px;
+    background: #fff;
+    border: 1px solid #707070;
+    border-top: none;
+}
+.stat-body > form {
+    padding-top: 79px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stat-item{
+    width: 33.33%;
+    text-align: center;
+}
+.stat-item span{
+    font-size: 1.75em;
+}
+
+.stat-item input[type='radio'],
+.stat-item input[type='radio']:checked {
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  margin-right: 0.1rem;
+  outline: none;
+  vertical-align: -7px;
+  cursor: pointer;
+}
+
+.stat-item input[type='radio'] {
+  background : url(../images/ico_radio.png);
+  background-size: cover;
+}
+.stat-item input[type='radio']:checked {
+  background: url(../images/ico_radio_checked.png);
+  background-size: cover;
+}
+
+.stat-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.stat-btn a{
+    display: block;
+    width: 200px;
+    height: 62px;
+    background: #7C7C7C;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 62px;
+    border-radius: 2em;
+    margin: 0 5px;
+}
+
+.stat-btn a.check{
+    background: #3277C9;
+}
+
+/* 캠페인 페이지 작업 */
+/* 캠페인 페이지 */
+.board-campaign-wrap{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* .board-campaign  */
+.campaign-content p{
+    width: 277px;
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 62px;
+    margin-top: 12px;
+    font-family: 'SCDrem7';
+    line-height: 1.5em;
+}
+.campaign-content span.notice{
+    font-family: 'SCDream4';
+}
+.campaign-content-blue p{
+    color: #3277C9;
+}
+.campaign-content-black p{
+    color: #000000;
+}
+.board-campaign{
+    margin-bottom: 3em;
+}
+
+
+
+
+.write-btn-2>a{
+    width: 200px;
+    height: 62px;
+    background: #3277C9;
+    border-radius: 2em;
+    text-align: center;
+    line-height: 62px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    font-family:'SCDrem7';
+}
+.write-btn-2 img{
+    width: 21px;
+    height: 21px;
+    margin-right: 10px;
+}
+
+
+
+/* 게시글 */
+/* campaign */
+.campaign-wrap{
+    background: #DBDBDB;
+    padding-bottom: 10em;
+}
+.campaign-title{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.campaign-title-left{
+    display: flex;
+    padding: 8em 0 2em;
+}
+.campaign-box{
+    width: 1280px;
+    height: auto;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 3.5em 0 6em;
+}
+.campaign-title-right{
+    width: 410px;
+    height: 203px;
+    overflow: hidden;
+}
+.campaign-title-right img{
+    width: 100%;
+}
+.campaign-table .table-top{
+    width: 1200px;
+    border-top:  6px solid #000000;
+    border-bottom: 1px solid #B4B4B4;
+    padding: 13px 0 0;
+    color: #000000;
+    background: #DBDBDB;
+    font-family:'SCDrem7';
+    margin: 0 auto;
+}
+.campaign-table .table-top h1{
+    font-size: 22px;
+    margin-left: 24px;
+}
+.top-flex{
+    width: 30%;
+    display: flex;
+    margin-left: 24px;
+    justify-content: space-between;
+}
+.top-flex p{
+    font-family: 'SCDream4';
+    line-height: 40px;
+}
+.campaign-content{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 33px 0;
+}
+.campaign-text{
+    width: 1200px;
+    height: 328px;
+    margin: 0 auto;
+    overflow: auto;
+    margin-bottom: 33px;
+}
+.campaign-text p{
+    font-size: 18px;
+    line-height: 1.75em;
+    font-weight: normal;
+}
+.campaign-file{
+    width: 1200px;
+    height: 121px;
+    margin: 0 auto;
+    display: flex;
+    border-top: 1px solid #B2B2B2;
+    border-bottom: 1px solid #B2B2B2;
+    margin-bottom: 21px;
+}
+.campaign-file .file-right{
+    width: 110px;
+    height: 100%;
+    text-align: center;
+    line-height: 125px;
+    background: #EFEFEF;
+    font-size: 18px;
+}
+.file-left{
+    padding: 0 58px;
+}
+.file-left ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.file-left ul li a{
+    color: #000000;
+    font-size: 1.125em;
+    font-family: 'SCDrem7';
+}
+.file-left ul li a:hover{
+    color: #3277C9;
+    text-decoration: underline;
+}
+.file-left ul li img{
+    margin-right: 1em;
+}
+
+
+.bottom-btn{
+    width: 1200px;
+    margin: 0 auto;
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.right-btn{
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+}
+.right-1, .right-2{
+    width: 160px;
+    height: 62px;
+    border-radius: 50px;
+    background: #707070;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'SCDrem7';
+    line-height: 62px;
+    margin: 0 5px 0 0;
+}
+.right-1 a, .right-2 a, .left1 a{
+    color: #FFFFFF;
+}
+.left1{
+    width: 200px;
+    height: 62px;
+    background: #3277C9;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 62px;
+    font-family: 'SCDrem7';
+}
+
+
+.campaign-line-fix{
+    width: 1200px;
+    height: 2px;
+    background: #2C2C2C;
+    margin: 0 auto;
+}
+
+
+/* 캠페인 글쓰기 팝업? */
+
+.cp-popup{
+    position: absolute;
+    top: 10em;
+    left: 0;
+    right: 0;
+    width: 620px;
+    height: 980px;
+    background: #fff;
+    margin: 0 auto;
+    display: none;
+}
+.cp-title{
+    height: 60px;
+    line-height: 60px;
+    background: #3277C9;
+    padding-left: 1.5em;
+}
+.cp-title h3{
+    font-family: 'SCDrem7';
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.cp-body{
+    padding: 40px 20px 63px;
+    border: 1px solid #707070;
+    border-top: none;
+}
+.cp-inner > div{
+    display: flex;
+    align-items: center;
+}
+
+.cp-inner > div > div{
+    width: 100%;
+    padding:0 21px;
+}
+.cp-inner > div > p {
+    width: 91px;
+    background: #EFEFEF;
+    padding-left: 21px;
+    font-size: 1.125em;
+}
+
+.cp-inner input[type=text]{
+    width: 100%;
+}
+
+
+/* 캠페인 팝업 - 구분 */
+.cp-sor{
+    height: 80px;
+    line-height: 80px;
+    border-top: 2px solid #B2B2B2;
+    border-bottom: 2px solid #B2B2B2;
+}
+.cp-sor-radio{
+    width: 508px;
+}
+.cp-sor-radio > form{
+    display: flex;
+    align-items: center;
+}
+.cp-sor-radio > form > div{
+    width: 150px;
+    padding-left: 1em;
+}
+
+/* 캠페인 팝업 - 제목 */
+.cp-innertitle{
+    height: 64px;
+    border-bottom: 1px solid #B2B2B2;
+}
+.cp-innertitle p{
+    height: 64px;
+    line-height: 64px;
+}
+.cp-innertitle input{
+    border: 1px solid #969696;
+    height: 52px;
+}
+/* 캠페인 팝업 - 내용 */
+.cp-contents{
+    height: 256px;
+    border-bottom: 1px solid #B2B2B2;
+}
+.cp-contents p{
+    height: 256px;
+    line-height: 256px;
+}
+.cp-contents textarea{
+    width: 100%;
+    height: 240px;
+    border: 1px solid #969696;
+    resize: none;
+}
+
+/* 캠페인 팝업 - 썸네일 */
+.cp-thumnail{
+    height: 198px;
+    border-bottom: 1px solid #B2B2B2;
+    align-items: baseline !important;
+}
+.cp-thumnail > p{
+    height: 198px;
+    line-height: 198px;
+}
+.cp-thumnail .flex-box{
+    display: flex;
+}
+
+.cp-thum-w .imageUpload{
+    background: url(../images/none_img.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 139px;
+    height: 180px;
+    /* border-radius: 1em; */
+    border: none;
+}
+.cp-size{
+    padding-left: .8125em;
+}
+.cp-size p{
+    color: #7C7C7C;
+}
+.cp-size input[type=file]{
+    position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip:rect(0,0,0,0);
+	border: 0;
+}
+
+.cp-size label{
+    display: block;
+    cursor: pointer;
+    margin-top: 1em;
+    width: 100px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    color: #fff;
+    font-family: 'SCDrem7';
+    background: #2C2C2C;
+}
+
+/* 캠페인 팝업 - 파일첨부 */
+.cp-attach{
+    height: 96px;
+    border-bottom: 2px solid #B2B2B2;
+}
+.cp-attach > p {
+    height: 96px;
+    line-height: 96px;
+}
+.cp-attach .attach-items{
+    height: auto;
+}
+
+
+/* 푸터 */
+footer{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+}
+.foot-area{
+    width: 1240px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.foot-area p{
+    font-size: .875em;
+    color: #AAAAAA;
+}
+
+/* fixed icon */
+
+.go-to-cart{
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background: #5299ED;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    bottom: 170px;
+    right: 8em;
+}
+.go-to-cart img{
+    margin-top: 1.25em;
+    margin-bottom: .5em;
+}
+.go-to-cart p{
+    line-height: 1em;
+}
+
+.go-top{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 100px;
+    right: 10em;
+    background: #FB4F67;
+    border-radius: 100%;
+}
+.go-top img{
+    margin-top: .75em;
+}
