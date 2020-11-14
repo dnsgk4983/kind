@@ -11,9 +11,9 @@ $(function(){
 
 
     $(".nav").hover(function(){
-        $('.main-nav li ul').slideToggle();
-        $('header.main').toggleClass('active');
-        $('.sub-back').slideToggle();
+        $('.main-nav li ul').stop().slideToggle();
+        $('header.main').stop().toggleClass('active');
+        $('.sub-back').stop().slideToggle();
     });
 
     $('.go-top').click(function(){
