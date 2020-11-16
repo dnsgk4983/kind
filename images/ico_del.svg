@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #707070;
+      }
+    </style>
+  </defs>
+  <g id="그룹_97" data-name="그룹 97" transform="translate(-810.5 -683.5)">
+    <rect id="사각형_102" data-name="사각형 102" class="cls-1" width="20" height="20" transform="translate(810.5 683.5)"/>
+    <line id="선_37" data-name="선 37" class="cls-2" x1="8" y2="8" transform="translate(816.5 689.5)"/>
+    <line id="선_41" data-name="선 41" class="cls-2" x2="8" y2="8" transform="translate(816.5 689.5)"/>
+  </g>
+</svg>

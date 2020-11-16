@@ -136,7 +136,7 @@ header.active{
 
 .main-nav a img{
     width: 100%;
-    padding-top: 1.5em;
+    padding-top: .75em;
 }
 
 /* 메뉴 호버 효과 */
@@ -223,6 +223,7 @@ header.active{
     width: 290px;
     height: 360px;
     border-radius: 1em;
+    overflow: hidden;
 }
 /* card-1 */
 .card-1{
@@ -243,6 +244,10 @@ header.active{
 }
 
 /* card-2 */
+
+.card-img{
+    border-radius: 1.25em;
+}
 
 /* card-3 */
 .card-title{
@@ -276,6 +281,7 @@ header.active{
 .card-3 ul > li > a{
     display: block;
     width: 160px;
+    height: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -465,7 +471,8 @@ header.active{
     font-size: 24px;
     font-family:'SCDrem7';
 
-    background: url(../images/check.png);
+    background: url(../images/ico_down_arrow.svg);
+    background-size: 1em;
     background-position: 220px center;
     background-repeat: no-repeat;
     appearance: none;
@@ -992,11 +999,11 @@ input[type='radio']:checked {
   cursor: pointer;
 }
 input[type='radio'] {
-  background : url(../images/ico_radio.png);
+  background : url(../images/ico_radio.svg);
   background-size: cover;
 }
 input[type='radio']:checked {
-  background: url(../images/ico_radio_checked.png);
+  background: url(../images/ico_radio_checked.svg);
   background-size: cover;
 }
 
@@ -1208,11 +1215,11 @@ input[type='radio']:checked {
 }
 
 .stat-item input[type='radio'] {
-  background : url(../images/ico_radio.png);
+  background : url(../images/ico_radio.svg);
   background-size: cover;
 }
 .stat-item input[type='radio']:checked {
-  background: url(../images/ico_radio_checked.png);
+  background: url(../images/ico_radio_checked.svg);
   background-size: cover;
 }
 
@@ -1265,6 +1272,10 @@ input[type='radio']:checked {
     font-family: 'SCDrem7';
     line-height: 1.5em;
 }
+.campaign-content img{
+    border-radius: 1.25em;
+}
+
 .campaign-content span.notice{
     font-family: 'SCDream4';
 }
@@ -1429,7 +1440,8 @@ input[type='radio']:checked {
     display: flex;
     justify-content: space-between;
 }
-.right-1, .right-2{
+.right-1 a, .right-2 a{
+    display: block;
     width: 160px;
     height: 62px;
     border-radius: 50px;
@@ -1443,7 +1455,8 @@ input[type='radio']:checked {
 .right-1 a, .right-2 a, .left1 a{
     color: #FFFFFF;
 }
-.left1{
+.left1 a{
+    display: block;
     width: 200px;
     height: 62px;
     background: #3277C9;
@@ -1659,7 +1672,7 @@ footer{
     border-radius: 100%;
     background: #5299ED;
     color: #fff;
-    position: absolute;
+    position: fixed;
     text-align: center;
     bottom: 170px;
     right: 8em;
@@ -1677,7 +1690,7 @@ footer{
     height: 60px;
     text-align: center;
     color: #fff;
-    position: absolute;
+    position: fixed;
     bottom: 100px;
     right: 10em;
     background: #FB4F67;
@@ -1685,4 +1698,20 @@ footer{
 }
 .go-top img{
     margin-top: .75em;
+}
+
+@media(max-width:1600px){
+    .go-to-cart{
+        width: 100px;
+        height: 100px;
+        /* bottom: 85px; */
+        right: .5em;
+    }
+    .go-to-cart img{
+        margin-top: .75em;
+    }
+    .go-top{
+        right: 1.75em;
+        /* bottom: 2em; */
+    }
 }
